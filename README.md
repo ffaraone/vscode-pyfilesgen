@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This extension help Python developers to generate a module/submodules tree filled with the __init__.py file.
+This extension help Python developers to generate a module/submodules tree filled with the `__init__.py` file.
 
 The extension can also be customized with a set of generators each one with a list of files to generate.
 
@@ -53,3 +53,9 @@ Choose the generator you want from the quick pick menu. For example choose `Djan
 And your file will be generated.
 
 ![Image of generated files](images/7.png)
+
+
+## License
+
+Py Files Generator is licensed under the MIT license.
+
