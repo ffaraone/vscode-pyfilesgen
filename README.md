@@ -16,7 +16,6 @@ You can add your custom generators by adding them to your settings file.
 ![Image of custom settings](https://github.com/ffaraone/vscode-pyfilesgen/raw/master/images/2.png)
 
 
-
 ## Usage
 
 To activate the extension right-click on a folder in the explorer pane: 
@@ -50,7 +49,7 @@ Choose the generator you want from the quick pick menu. For example choose `Djan
 
 ![Image of generated modules](https://github.com/ffaraone/vscode-pyfilesgen/raw/master/images/6.png)
 
-And your file will be generated.
+And your files will be generated.
 
 ![Image of generated files](https://github.com/ffaraone/vscode-pyfilesgen/raw/master/images/7.png)
 

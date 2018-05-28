@@ -1,22 +1,12 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as vscode from 'vscode';
-'use strict';
+
 
 export function activate(context: vscode.ExtensionContext) {
 
 
     let disposable = vscode.commands.registerCommand('extension.generatePyFiles', (fileObj) => {
-
-        if (!fileObj) {
-            console.log('not a file object');
-            return;
-        }
-
-        if (!fs.lstatSync(fileObj.path).isDirectory()) {
-            console.log('not a path');
-            return;
-        }
 
         let basePath = fileObj.path;
         let generators: Array<any> | null | undefined = vscode.workspace.getConfiguration('pyfilesgen').get('generators');
@@ -29,10 +19,10 @@ export function activate(context: vscode.ExtensionContext) {
 
         if (generators) {
             for (let gen of generators) {
-                if ('label' in gen && 'files' in gen && gen.label != null && gen.files instanceof Array) {
+                if ('label' in gen && 'files' in gen && gen.label !== null && gen.files instanceof Array) {
                     generatorsList.push(gen);
                 }
-            } 
+            }
         }
 
         vscode.window.showQuickPick(generatorsList)
@@ -49,7 +39,7 @@ export function activate(context: vscode.ExtensionContext) {
                             }
                             return 'Please enter a path';
                         }
-                    }).then((subPath: string|undefined) => {
+                    }).then((subPath: string | undefined) => {
                         if (subPath === undefined) {
                             return;
                         }
@@ -67,17 +57,27 @@ export function activate(context: vscode.ExtensionContext) {
                             paths.push(newPath);
                             basePath = newPath;
                         }
-                        for (const p of paths) {
-                            fs.mkdirSync(p);
-                            const initFile = path.join(p, '__init__.py');
-                            fs.closeSync(fs.openSync(initFile, 'w'));
+
+                        if (fs.existsSync(paths[0])) {
+                            vscode.window.showErrorMessage(
+                                `The folder ${paths[0]} already exists!`);
+                        } else {
+                            for (const p of paths) {
+                                fs.mkdirSync(p);
+                                const initFile = path.join(p, '__init__.py');
+                                if (!fs.existsSync(initFile)) {
+                                    fs.closeSync(fs.openSync(initFile, 'w'));
+                                }
+                            }
                         }
                     });
                 }
                 if (value.files && value.files instanceof Array) {
-                    for (let filename of value.files) {
-                        let fullPath = path.join(basePath, filename);
-                        fs.closeSync(fs.openSync(fullPath, 'w'));
+                    for (const filename of value.files) {
+                        const fullPath = path.join(basePath, filename);
+                        if (!fs.existsSync(fullPath)) {
+                            fs.closeSync(fs.openSync(fullPath, 'w'));
+                        }
                     }
                 }
             });
