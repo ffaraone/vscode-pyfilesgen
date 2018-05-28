@@ -1,7 +1,4 @@
-# Change Log
-All notable changes to the "pymodule" extension will be documented in this file.
+# Py Files Generator Change Log
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
+## [1.0.0] - 05/28/2018
 - Initial release
