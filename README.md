@@ -13,7 +13,7 @@ By default, **Py Files Generator** generates a directories tree and put a `__ini
 
 You can add your custom generators by adding them to your settings file.
 
-![Image of custom settings](images/2.png)
+![Image of custom settings](https://github.com/ffaraone/vscode-pyfilesgen/raw/master/images/2.png)
 
 
 
@@ -21,7 +21,7 @@ You can add your custom generators by adding them to your settings file.
 
 To activate the extension right-click on a folder in the explorer pane: 
 
-![Image of Context menu](images/1.png)
+![Image of Context menu](https://github.com/ffaraone/vscode-pyfilesgen/raw/master/images/1.png)
 
 
 Choose `Python files generator...` from the context menu.
@@ -29,18 +29,18 @@ Choose `Python files generator...` from the context menu.
 From the quick pick menu choose the generator you want to use:
 
 
-![Image of quick pick](images/3.png)
+![Image of quick pick](https://github.com/ffaraone/vscode-pyfilesgen/raw/master/images/3.png)
 
 
 ### Generate python modules
 
 Choose `Python modules` from the quick pick menu and then type the path you want to generate:
 
-![Image of input for path](images/4.png)
+![Image of input for path](https://github.com/ffaraone/vscode-pyfilesgen/raw/master/images/4.png)
 
 Type `enter` and the modules will be generated.
 
-![Image of generated modules](images/5.png)
+![Image of generated modules](https://github.com/ffaraone/vscode-pyfilesgen/raw/master/images/5.png)
 
 
 ### Invoke custom generator
@@ -48,11 +48,11 @@ Type `enter` and the modules will be generated.
 Choose the generator you want from the quick pick menu. For example choose `Django App files`:
 
 
-![Image of generated modules](images/6.png)
+![Image of generated modules](https://github.com/ffaraone/vscode-pyfilesgen/raw/master/images/6.png)
 
 And your file will be generated.
 
-![Image of generated files](images/7.png)
+![Image of generated files](https://github.com/ffaraone/vscode-pyfilesgen/raw/master/images/7.png)
 
 
 ## License
