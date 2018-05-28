@@ -49,6 +49,13 @@
                 }
             }
         ],
+        "commands":[
+            {
+                "command": "extension.generatePyFiles",
+                "title": "Py Files Generator",
+                "category": "Python"
+            }
+        ],
         "menus": {
             "explorer/context": [
                 {

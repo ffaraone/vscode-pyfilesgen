@@ -5,7 +5,18 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
 
+
     let disposable = vscode.commands.registerCommand('extension.generatePyFiles', (fileObj) => {
+
+        if (!fileObj) {
+            console.log('not a file object');
+            return;
+        }
+
+        if (!fs.lstatSync(fileObj.path).isDirectory()) {
+            console.log('not a path');
+            return;
+        }
 
         let basePath = fileObj.path;
         let generators: Array<any> | null | undefined = vscode.workspace.getConfiguration('pyfilesgen').get('generators');
