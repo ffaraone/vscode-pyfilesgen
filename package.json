@@ -3,7 +3,7 @@
     "displayName": "Py Files Generator",
     "description": "Generate python files and module subtree",
     "version": "1.0.0",
-    "publisher": "Francesco Faraone",
+    "publisher": "ffaraone",
     "engines": {
         "vscode": "^1.23.0"
     },
