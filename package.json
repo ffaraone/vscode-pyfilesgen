@@ -2,7 +2,7 @@
     "name": "pyfilesgen",
     "displayName": "Py Files Generator",
     "description": "Generate python files and module subtree",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "ffaraone",
     "engines": {
         "vscode": "^1.23.0"
@@ -10,22 +10,22 @@
     "license": "SEE LICENSE IN LICENSE.md",
     "icon": "images/pyfilesgen_icon.png",
     "galleryBanner": {
-      "color": "#1289B9",
-      "theme": "dark"
+        "color": "#1289B9",
+        "theme": "dark"
     },
     "categories": [
-      "Programming Languages",
-      "Other"
+        "Programming Languages",
+        "Other"
     ],
     "keywords": [
-      "python",
-      "django",
-      "init",
-      "module",
-      "generator"
+        "python",
+        "django",
+        "init",
+        "module",
+        "generator"
     ],
     "repository": {
-      "url": "https://github.com/ffaraone/vscode-pyfilesgen.git"
+        "url": "https://github.com/ffaraone/vscode-pyfilesgen.git"
     },
     "homepage": "https://github.com/ffaraone/vscode-pyfilesgen/blob/master/README.md",
     "activationEvents": [
@@ -49,7 +49,7 @@
                 }
             }
         ],
-        "commands":[
+        "commands": [
             {
                 "command": "extension.generatePyFiles",
                 "title": "Py Files Generator",
@@ -57,6 +57,12 @@
             }
         ],
         "menus": {
+            "commandPalette": [
+                {
+                    "command": "extension.generatePyFiles",
+                    "when": "1 == 2"
+                }
+            ],
             "explorer/context": [
                 {
                     "when": "explorerResourceIsFolder",
